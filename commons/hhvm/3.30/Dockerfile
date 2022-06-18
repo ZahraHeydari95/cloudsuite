@@ -16,6 +16,6 @@ RUN git clone git://github.com/facebook/hhvm.git \
     && cmake -DMYSQL_UNIX_SOCK_ADDR=/var/run/mysqld/mysqld.sock . \
     && make -j $(nproc) \
     && make install \
-    && cd .. && rm -rf /hhvm
+    && cd .. 
 
 ENV HHVM_BIN /usr/local/bin/hhvm
